@@ -1,0 +1,198 @@
+body{
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  animation: circleC  2s;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@keyframes circleC{
+  0% { clip-path: circle(10%)}
+  100%{clip-path:circle(75%)}
+}
+
+.clouds{
+  width: 100%;
+  height: 100%;
+  background-image: url("images/art.png");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed ;
+  
+  
+}
+
+.deleteMe {
+  padding-bottom: 500px;
+}
+
+
+
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 72.5px;
+  width: 0;
+  position: fixed; /* Stay in place */
+  /* z-index: 1; Sit on top */
+  left: 0;
+  top: 0;
+  background-color: black;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+ 
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 2px; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 0;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px 8px 8px 1px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: inline; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: rgb(10, 182, 250);
+}
+
+/* Position the close button (top right corner) */
+.overlay  {
+  position: absolute;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+
+
+
+.menu-btn {
+  font-size: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(10, 182, 250);;
+  height:10%;
+  width:0;
+  border: none;
+  transition: 0.3s;
+  padding:0
+}
+
+
+
+.menu-btn{
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height:72.5px;
+  cursor:pointer;
+  transition: all .2s ease-in-out;
+  
+  /* background-color: rgba(0,0,0, 0.9); */
+  z-index: 1;
+}
+
+.menu-btn:hover{
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.menu-btn_burger{
+  width: 50px;
+  height: 6px;
+  background:#fff;
+  border-radius: 5px;
+  box-shadow:0 2px 5px rgb(10, 182, 250);;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after{
+  content:"";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background:#fff;
+  border-radius: 5px;
+  box-shadow:0 2px 5px rgb(10, 182, 250);;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before{
+  transform:translateY(-16px);
+}
+
+.menu-btn_burger::after{
+  transform:translateY(16px);
+}
+
+/* Button Animation */
+
+.menu-btn.open .menu-btn_burger{
+  transform:translateX(-50px);
+  background:transparent;
+  box-shadow:none;
+}
+
+.menu-btn.open .menu-btn_burger::before{
+  transform:rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after{
+  transform:rotate(-45deg) translate(35px, 35px);
+}
+
+.plane{
+  position: absolute;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  transition: 1s ease;
+  clip-path: polygon(0% 0%, 100% 0% 100%,);
+}
+
+.name{
+  font-size:10em;
+  line-height: 110px;
+  display:inline-block;
+  margin-bottom: 2px;
+  text-shadow: 5px 5px 5px  rgb(10, 182, 250);
+}
+
+.job-d{
+  margin-top: 0;
+  font-style:italic;
+}
+.body1{
+  padding: 2em;
+  font-family:'Courier New', Courier, monospace;
+}
+
+
+.inner p {
+  width:600px;
+  animation: wordS 2s;
+  font-size: 1em;
+}
+
