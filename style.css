@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   height: 100%;
   margin: 0;
@@ -174,13 +178,17 @@ body{
 
 .job-d{
   margin-top: 0;
+  font-size:8em;
   font-style:italic;
 }
 .body1{
-  padding: 2em;
+  
   font-family:'Courier New', Courier, monospace;
 }
 
+.pt1{
+  padding: 2em;
+}
 
 .about-info p {
   width:600px;
@@ -252,7 +260,33 @@ body{
   font-weight: bold;
 }
 
+.projects{
+  background-color: black;
+  padding:2em;
+  color:white;
+  margin:0
+}
+
+
 .project_desc{
   font-size: 1.5em;
   margin-top: 0.25em;
+}
+
+.project_t{
+  position: absolute;
+  font-size: 3em;
+  z-index: 1;
+  color:white;
+  width: 600px;
+  text-align: center;
+  margin-top: 5.13em;
+  margin-bottom: 0;
+  background:rgba(0,0,0,0.6);
+  transition: 4s;
+}
+
+.image:hover > .project_t{
+  opacity:0;
+  transition: .1000s;
 }

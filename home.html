@@ -1,54 +1,70 @@
 <!DOCTYPE html>
-<head>
-	<title>Portfolio</title>
-	<link href = "style.css" rel = "stylesheet">
-	
-	
-</head>
-<body>
-	
-	<div class = "clouds">
-		<div class="plane"></div>
-		<header>
-			<div class = "menu-btn">
-				<div class ="menu-btn_burger"></div>
-			</div>
-		</header>
-		<div id="myNav" class="overlay">
-
-			
-			<div class="overlay-content">
-				<a href="home.html">About Me</a>
-				<a href="projects.html">Projects</a>
-				<a href="skills.html">Skills</a>
-				<a href="contact.html">Contact</a>
-			</div>
-		</div>
+<html>
+	<head>
+		<title>Portfolio</title>
+		<link href = "style.css" rel = "stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		
-		<script src= "script.js"></script>
-		<div class = "body1">
-			<h1 class = "name">Antonio<br>Thornton</h1>
-			<h2 class = "job-d">Software Developer</h2>
-			<div class="container">
-				<div class="about-info">
-					<h1>About Me</h1>
-					<p>My name is Antonio Thornton and I currently live in Bruce, Mississippi where I graduated from Bruce High School with honors and decided to take my talents to Base Camp Coding Academy to pursue a software development career. Some of my hobbies include playing and watching sports, spending time with friends and family, and going to the gym in my free time.</p>
+		
+	</head>
+	<body>
+		
+		<div id = "clouds" class = "clouds" style = "opacity: 1; visibility:inherit">
+			<div class="plane"></div>
+			<header>
+				<div class = "menu-btn">
+					<div class ="menu-btn_burger"></div>
 				</div>
-				<div class = "projects">
+			</header>
+			<div id="myNav" class="overlay">
+
+				
+				<div class="overlay-content">
+					<a href="#about">About Me</a>
+					<a href="#projects">Projects</a>
+					<a href="#skills">Skills</a>
+					<a href="#contact">Contact</a>
+				</div>
+			</div>
+			
+			
+			<div class = "body1">
+				<div class = "pt1">
+					<h1 class = "name">Antonio<br>Thornton</h1>
+					<h2 class = "job-d">Software<br>Developer</h2>
+					<div class="container">
+						<div id = "about" class="about-info">
+							<h1>About Me</h1>
+							<p>My name is Antonio Thornton and I currently live in Bruce, Mississippi where I graduated from Bruce High School with honors and decided to take my talents to Base Camp Coding Academy to pursue a software development career. Some of my hobbies include playing and watching sports, spending time with friends and family, and going to the gym in my free time.</p>
+						</div>
+					</div>
+				</div>
+				<div id = "projects" class = "projects">
 					<h1>This is a list of the projects I've done so far</h1>
-					<div class = "image">
+					<div class = "image" data-aos = "fade-right">
 						<img class = "image_ja" src = "images/ja.jpg" alt = "Basketball">
+						<div class = "project_t">NBA Arcade Game</div>
 						<div class= "image_overlay" >
 							<div class = "project_title">NBA Arcade Game</div>
 							<p class = "project_desc">
 								Howdy
 							</p>
-						</div>
-						
+						</div>	
 					</div>
 
 				</div>
+				
 			</div>
 		</div>
-	</div>
-</body>
+		<script src= "script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+		AOS.init({
+			once:true,
+			duration:1500,
+			delay:1000
+		});
+		</script>
+		
+	</body>
+</html>
