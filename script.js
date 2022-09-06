@@ -14,6 +14,4 @@ menuBtn.addEventListener("click", () =>{
 })
 
 
- window.addEventListener('scroll', function() {
-             document.getElementById(".clouds").style.opacity = 1 - pageYOffset/700;
-        });
+ 

@@ -2,11 +2,18 @@ html{
   scroll-behavior: smooth;
 }
 
+h1{font-family: 'Abril Fatface';}
+h2, p {font-family:"Roboto"; }
+
 body{
   height: 100%;
   margin: 0;
-  background-color: black;
+  background: black;
   animation: circleC  2s;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed ;
 }
 
 @keyframes fadeIn {
@@ -30,8 +37,6 @@ body{
   background-position-x: center;
   background-position-y: center;
   background-attachment: fixed ;
-  
-  
 }
 
 .deleteMe {
@@ -92,6 +97,7 @@ body{
 
 .menu-btn {
   font-size: 10px;
+  position: fixed;
   cursor: pointer;
   background-color: transparent;
   color: rgb(10, 182, 250);;
@@ -105,7 +111,7 @@ body{
 
 
 .menu-btn{
-  position:relative;
+  position:fixed;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -169,8 +175,9 @@ body{
 
 
 .name{
-  font-size:10em;
-  line-height: 110px;
+  font-size:10.9375rem;
+  font-size: 18vw;
+  line-height: 150px;
   display:inline-block;
   margin-bottom: 2px;
   text-shadow: 5px 5px 5px  rgb(10, 182, 250);
@@ -178,17 +185,18 @@ body{
 
 .job-d{
   margin-top: 0;
-  font-size:8em;
+  font-size: 8em;
+  font-size: 15vw;
+  line-height: 110px;
   font-style:italic;
+  text-align: right;
 }
 .body1{
+  padding: 2em;
   
-  font-family:'Courier New', Courier, monospace;
+  opacity: 1;
 }
 
-.pt1{
-  padding: 2em;
-}
 
 .about-info p {
   width:600px;
@@ -204,41 +212,40 @@ body{
 
 .image{
   position:relative;
-  width:900px;
+  width:50%;
 
 }
 
 
 
 .image_ja{
-  position:absolute;
+ 
   display:block;
-  width:600px;
-  height:300px;
+  width:100%;
   transition: 1s;
-  z-index:1;
-}
-
-.image:hover > .image_ja{
-  width:300px
+  
 }
 
 .image_overlay{
-  /* position:absolute; */
+  position:absolute;
   top:0;
   left:0;
-  width:0;
-  height:300px;
+  width:100%;
+  height:100%;
   background:rgba(0,0,0,0.6);
   color:white;
   display:flex;
   flex-direction: column;
-  text-align: right;
-  /* justify-content: center; */
+  
+  justify-content: center;
   opacity:0;
-  transition:  1s;
-  z-index:0
+  transition: opacity .75s;
+  
 
+}
+
+.image_overlay:hover{
+  opacity:1
 }
 
 .image_overlay > * {
@@ -246,47 +253,69 @@ body{
   transition: transform 2.5s;
 }
 
-.image:hover > .image_overlay{
-  opacity:1;
-  width:100%
-}
-
-.image:hover > .image_overlay > *{
+.image_overlay:hover > * {
   transform:translateY(0);
+  
 }
 
-.project_title{
-  font-size: 2em;
-  font-weight: bold;
-}
+
 
 .projects{
   background-color: black;
-  padding:2em;
   color:white;
-  margin:0
+  padding:2em
+}
+.projects h1{
+  text-align: center;
 }
 
+.project_title{
+  font-size:2em;
+  /* font-weight: bold; */
+  text-align: center;
+}
 
 .project_desc{
   font-size: 1.5em;
-  margin-top: 0.25em;
+  margin-top: 0;
+  margin-left: 2em;
+  text-align: center;
 }
 
 .project_t{
-  position: absolute;
-  font-size: 3em;
+  position: relative;
+  float: left;
+  font-size: 2em;
   z-index: 1;
   color:white;
-  width: 600px;
+  width: 3em;
   text-align: center;
-  margin-top: 5.13em;
+  margin-top:0;
   margin-bottom: 0;
   background:rgba(0,0,0,0.6);
   transition: 4s;
 }
 
-.image:hover > .project_t{
-  opacity:0;
-  transition: .1000s;
+
+
+.projects a {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  padding: 1em;
+  display: block;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin: auto;
+  margin-top:0;
+  place-items: center;
+  border-radius:5px;
+  transition: .5s
+}
+
+.projects a:hover{
+  background-color: red;
 }
