@@ -1,9 +1,14 @@
 html{
   scroll-behavior: smooth;
+  color: #f5eee6 ;
 }
 
-h1{font-family: 'Abril Fatface';}
-h2, p {font-family:"Roboto"; }
+h1{
+  font-family: 'Abril Fatface';
+}
+h2, p {
+  font-family:"Roboto";
+  font-weight: 300; }
 
 body{
   height: 100%;
@@ -32,7 +37,7 @@ body{
 .clouds{
   width: 100%;
   height: 100%;
-  background-image: url("images/art.png");
+  background-image: url("images/red-bg.jpg");
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
@@ -62,10 +67,12 @@ body{
  
 /* Position the content inside the overlay */
 .overlay-content {
-  position: relative;
-  top: 2px; /* 25% from the top */
+  position: fixed;
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid;
+  top:0; /* 25% from the top */
   width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
+  text-align: right; /* Centered text/links */
   margin-top: 0;
 }
 
@@ -73,8 +80,8 @@ body{
 .overlay a {
   padding: 8px 8px 8px 1px;
   text-decoration: none;
-  font-size: 36px;
-  color: #818181;
+  font-size: 20px;
+  color: #a6150a;
   display: inline; /* Display block instead of inline */
   transition: 0.3s; /* Transition effects on hover (color) */
 }
@@ -100,7 +107,7 @@ body{
   position: fixed;
   cursor: pointer;
   background-color: transparent;
-  color: rgb(10, 182, 250);;
+  color: rgb(243, 105, 7);;
   height:10%;
   width:0;
   border: none;
@@ -133,7 +140,7 @@ body{
   height: 6px;
   background:#fff;
   border-radius: 5px;
-  box-shadow:0 2px 5px rgb(10, 182, 250);;
+  box-shadow:0 2px 5px rgb(243, 105, 7);
   transition: all .5s ease-in-out;
 }
 
@@ -145,7 +152,7 @@ body{
   height: 6px;
   background:#fff;
   border-radius: 5px;
-  box-shadow:0 2px 5px rgb(10, 182, 250);;
+  box-shadow:0 2px 5px rgb(243, 105, 7);;
   transition: all .5s ease-in-out;
 }
 
@@ -175,27 +182,28 @@ body{
 
 
 .name{
-  font-size:10.9375rem;
-  font-size: 18vw;
-  line-height: 150px;
-  display:inline-block;
-  margin-bottom: 2px;
-  text-shadow: 5px 5px 5px  rgb(10, 182, 250);
+  font-size:2.9375rem;
+  /* font-size: 18vw; */
+  margin-top: 5em;
+  
+  
+  
 }
 
 .job-d{
   margin-top: 0;
-  font-size: 8em;
-  font-size: 15vw;
-  line-height: 110px;
+  font-size: 2em;
+  /* font-size: 15vw; */
+  margin-bottom:5em;
   font-style:italic;
-  text-align: right;
+  
 }
-.body1{
+.body1 {
   padding: 2em;
   
   opacity: 1;
 }
+
 
 
 .about-info p {
@@ -204,25 +212,29 @@ body{
   font-size: 1em;
 }
 
-.projects{
-  
-  margin:2em
-}
+
+
+
+
+
 
 
 .image{
   position:relative;
   width:50%;
+  margin-top: 1em;
+  margin-left: 1em;
 
 }
 
 
 
-.image_ja{
+.image_{
  
   display:block;
   width:100%;
   transition: 1s;
+  
   
 }
 
@@ -233,7 +245,7 @@ body{
   width:100%;
   height:100%;
   background:rgba(0,0,0,0.6);
-  color:white;
+  
   display:flex;
   flex-direction: column;
   
@@ -261,15 +273,17 @@ body{
 
 
 .projects{
-  background-color: black;
-  color:white;
-  padding:2em
+  background-color: rgba(0, 0, 0, 0.383);
+  
+  padding:2em;
+  margin:0
 }
 .projects h1{
   text-align: center;
 }
 
 .project_title{
+  margin-top: 2em;
   font-size:2em;
   /* font-weight: bold; */
   text-align: center;
@@ -278,7 +292,8 @@ body{
 .project_desc{
   font-size: 1.5em;
   margin-top: 0;
-  margin-left: 2em;
+  justify-content: center;
+  
   text-align: center;
 }
 
@@ -287,7 +302,7 @@ body{
   float: left;
   font-size: 2em;
   z-index: 1;
-  color:white;
+  
   width: 3em;
   text-align: center;
   margin-top:0;
@@ -298,11 +313,72 @@ body{
 
 
 
+
+.image2{
+  position:relative;
+  width:50%;
+  margin-left: auto;
+  margin-top: 1em;
+  margin-right: 1em;
+
+}
+
+
+
+.image_2{
+ 
+  display:block;
+  width:100%;
+  transition: 1s;
+  
+}
+
+.image_overlay2{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  
+  display:flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  opacity:0;
+  transition: opacity .75s;
+  
+
+}
+
+.image_overlay2:hover{
+  opacity:1
+}
+
+.image_overlay2 > * {
+  transform:translateY(20px);
+  transition: transform 2.5s;
+}
+
+.image_overlay2:hover > * {
+  transform:translateY(0);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
 .projects a {
   box-sizing: border-box;
   text-decoration: none;
   color: white;
-  background-color: blue;
   padding: 1em;
   display: block;
   left:0;
@@ -316,6 +392,56 @@ body{
   transition: .5s
 }
 
+
+
+.projects a:before {
+  content: '';
+  background: linear-gradient(45deg, #00b3ff, #ff7300, #fffb00, #00b3ff, #00ffd5, #00b3ff, #ff7300, #ff7300);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.projects a:active {
+  color: #000
+}
+
+.projects a:active:after {
+  background: transparent;
+}
+
+.projects a:hover:before {
+  opacity: 1;
+}
+
+.projects a:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
 .projects a:hover{
   background-color: red;
 }
+

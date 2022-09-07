@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio</title>
+		<link href = "style.css" rel = "stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@300&display=swap" rel="stylesheet">
+		
+		
+		
+	</head>
+	<body>
+		
+		<div id = "clouds" class = "clouds">
+			<div class="plane"></div>
+			<header>
+				<div class = "menu-btn">
+					<div class ="menu-btn_burger"></div>
+				</div>
+			</header>
+			<div id="myNav" class="overlay">
+
+				
+				<div class="overlay-content">
+					<a href="#about">About Me</a>
+					<a href="#projects">Projects</a>
+					<a href="#skills">Skills</a>
+					<a href="#contact">Contact</a>
+				</div>
+				
+			</div>
+			
+			
+			<div class = "body1">
+				<div class = "pt1">
+					<h1 class = "name" data-aos="fade-up-right">Antonio Thornton</h1>
+					<h2 class = "job-d" data-aos="fade-up-left">Software Developer</h2>
+					<div class="container">
+						<div id = "about" class="about-info">
+							<div class = "container">
+								<div class = "inner">
+									<h1>About Me</h1>
+									<p>My name is Antonio Thornton and I currently live in Bruce, Mississippi where I graduated from Bruce High School with honors and decided to take my talents to Base Camp Coding Academy to pursue a software development career. Some of my hobbies include playing and watching sports, spending time with friends and family, and going to the gym in my free time.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id = "projects" class = "projects">
+				<h1>This is a list of the projects I've done so far</h1>
+				<div class = "image" data-aos = "fade-right">
+					<img class = "image_" src = "images/ja.jpg" alt = "Basketball">
+					<div class= "image_overlay" >
+						<div class = "project_title">NBA Arcade Game</div>
+						<p class = "project_desc">
+							Using only python, I created a game where you can choose 1 player from any of the 10 provided teams starting 5 to play against your opponent. Once you both have chosen a player the game begins and whoever gets to 21 points first wins.
+						</p>
+						<a href="https://github.com/AntonioT04/NBA-Arcade-Game" target = "_blank">Game Files</a>
+					</div>	
+				</div>
+				<div class = "image2" data-aos = "fade-left">
+					<img class = "image_2" src = "images/goat.png" alt = "LeBron James">
+					<div class= "image_overlay2" >
+						<div class = "project_title">What It Means to be The G.O.A.T</div>
+						<p class = "project_desc">
+							For this project we made a website dedicated to who we thought was the G.O.A.T (Greatest of All Time) to us and I did mine on LeBron James. This project was made with HTML and CSS. In fact, this was my first time using these languages.
+						</p>
+						<a href="https://antoniot04.github.io/goat_project/" target = "_blank"> Website</a>
+					</div>	
+				</div>
+
+			</div>
+		</div>
+		<script src= "script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+		AOS.init({
+			once:true,
+			duration:1500,
+			delay:1000
+		});
+		</script>
+		
+	</body>
+</html>
